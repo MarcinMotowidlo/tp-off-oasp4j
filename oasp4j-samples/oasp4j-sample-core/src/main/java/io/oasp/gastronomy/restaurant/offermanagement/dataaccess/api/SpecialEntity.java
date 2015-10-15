@@ -81,7 +81,8 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
    * @return activePeriod the {@link WeeklyPeriodEmbeddable active period} this special applies for.
    */
   @Override
-  public WeeklyPeriodEmbeddable getActivePeriod() {
+  @Embedded
+  public WeeklyPeriod getActivePeriod() {
 
     return this.activePeriod;
   }
